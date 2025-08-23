@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List
 
-@dataclass
+@dataclass        #this is different then typical constructors and is known as the "modern shortcut", which helps us to take a list of floats by using a decorator.
 class Vector:
     coords: List[float] = field(default_factory=list)
 
-    def __len__(self):
+    def __len__(self):          #determines the length of the given vector
         return len(self.coords)
 
-    def __getitem__(self, j):
+    def __getitem__(self, j):        #gets the index
         return self.coords[j]
 
     def __setitem__(self, j, val):
