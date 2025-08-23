@@ -52,14 +52,3 @@ class Vector:
     def __str__(self):
         return "<"+ str(self.coords)[1:-1] + ">"
         
-if __name__ == "__main__":
-    v1 = Vector([1, 2, 3])
-    v2 = Vector([4, 5, 6])
-    v3 = v1 + v2
-    v4 = v1 - v2
-    print("v1:", v1)
-    print("v2:", v2)
-    print("v1 + v2 =", v3)
-    print("v1 - v2 =", v4)
-    print("v1 == v2?", v1 == v2)
-    print("v1 != v2?", v1 != v2)
