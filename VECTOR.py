@@ -45,6 +45,11 @@ class Vector:
             return self.coords == other
         else:
             return False
+            
+    def dot(self, other):
+    if len(self) != len(other):
+        raise ValueError("Vectors must be the same length for dot product")
+    return sum(self[j] * other[j] for j in range(len(self)))
 
     def __ne__(self, other):
         return not self == other
